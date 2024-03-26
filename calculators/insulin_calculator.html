@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DIALOG</title>
+  
+  <link rel="stylesheet" href="../css\indexx.css">
+  
+   
+</head>
+<body>
+  <div class="header">
+    <h2>DIALOG</h2>
+    <h5>Managing Diabetes</h5>
+  
+    <nav>
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Diabetes 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="../Diabetes/signs-and-symptoms.html">Signs and Symptoms</a>
+              <a href="../diabetes/treatment.html">Treatment</a>
+            
+        </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Calculators
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../calculators/bmi_claculator.html">BMI Calculator</a>
+                <a href="../calculators/calorie_calc.html">Calorie Calculator</a>
+                <a href="../calculators/insulin_calculator.html">Insulin Calculator</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Health tools
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="../healthy-living/physical.html">Physical Exercise</a>
+            <a href="../healthy-living/medication_tracking.html">Medications</a>
+            <a href="../healthy-living/glucose_tracker.html">Glucose levels</a>
+          </div>
+        </div> 
+
+        <div class="dropdown">
+            <button class="dropbtn">Education Resources
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="../living-with-diabetes/gestational.html">Gestational</a>
+              <a href="../living-with-diabetes/prediabetes.html">Prediabetes</a>
+              <a href="../living-with-diabetes/type1.html">Type 1</a>
+              <a href="../living-with-diabetes/type2.html">Type 2</a>
+            </div>
+        </div>
+      </nav>
+  </div>
+<div class="row">
+  <div class="column-66">
+  <div class="form-border">
+    <form class="form-bmi" id="insulinForm">
+
+    <label for="currentSugar">Current Blood Sugar Level (mg/dL):</label>
+    <input type="number" id="currentSugar" required><br>
+    <label for="targetSugar">Target Blood Sugar Level (mg/dL):</label>
+    <input type="number" id="targetSugar" required><br>
+    <label for="isf">Insulin Sensitivity Factor (ISF):</label>
+    <input type="number" id="isf" required><br>
+    <label for="cr">Carbohydrate Ratio (CR):</label>
+    <input type="number" id="cr" required><br>
+    <button type="button" onclick="calculateInsulin()">Calculate Insulin</button>
+    <p id="result"></p>
+</form>
+</div>
+</div>
+<div class="column-33">
+  <img src="../images/insulin-funny.jpg" alt="">
+</div>
+</div>
+
+<script>
+  function calculateInsulin() {
+      var currentSugar = parseFloat(document.getElementById("currentSugar").value);
+      var targetSugar = parseFloat(document.getElementById("targetSugar").value);
+      var isf = parseFloat(document.getElementById("isf").value);
+      var cr = parseFloat(document.getElementById("cr").value);
+
+      // Calculate correction insulin dose
+      var correctionInsulin = (currentSugar - targetSugar) / isf;
+
+      // Prompt for correction dose
+      var correctionPrompt = "Correction Insulin Dose (units): " + correctionInsulin.toFixed(2);
+
+      // Prompt for carb dose
+      var carbPrompt = "Carb Insulin Dose (units): " + (cr / 10).toFixed(2);
+
+      // Total insulin dose
+      var totalInsulin = correctionInsulin + (cr / 10);
+
+      // Prompt for total dose
+      var totalPrompt = "Total Insulin Dose (units): " + totalInsulin.toFixed(2);
+
+      document.getElementById("result").innerHTML = correctionPrompt + "<br>" + carbPrompt + "<br>" + totalPrompt;
+  }
+</script>
+<div class="row">
+  <div class="column side">
+    <a href="../calculators/bmi_claculator.html" class="thumbnail">
+      <img src="../images/bmiscale.jfif" alt="bmi_claculator">
+      <div class="caption">
+        <h5>BMI</h5>	
+        <p>Know your body mass index (BMI)</p>
+      </div>
+    </a>
+  </div>
+  <div class="column side">
+    <a href="../calculators/insulin_calculator.html" class="thumbnail">
+      <img src="../images/insulin.jfif" alt="insulin_calculator">
+      <div class="caption">
+        <h5>Insulin calculator</h5>
+        <p>Find out how much insulin you need</p>
+      </div>
+    </a>
+  </div>
+  <div class="column side">
+    <a href="../calculators/calorie_calc.html" class="thumbnail last-thumbnail">
+      <img src="../images/calorie.jfif"  alt="calorie calculator">
+      <div class="caption">
+        <h5> Calorie calculator</h5>
+        <p>Found out how much calorie to maintain a bodyweight</p>
+      </div>
+    </a>
+  </div>
+ 
+  
+</div>
+        
+<div class="footer-section">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="column side">
+          <h6 class="footer-headings">QUICK LINKS</h6>
+          <ul>
+            <li><a href="../diabetes/signs-and-symptoms.html"> Diabetes</a> </li>
+            <li><a href="../healthy-living/physical.html"> Exercise</a> </li>
+            <li><a href="../healthy-living/diet.html"> Diet & Nutrition</a> </li>
+            <li><a href="../calculators/bmi_claculator.html"> BMI Calculator</a> </li>
+            <li><a href="../calculators/calorie_calc.html"> Calorie Calculator</a> </li>
+          </ul>
+        </div>
+        
+        <div class="column side">
+          
+            
+              <h6 class="text-center footer-headings">STAY CONNECTED</h6>
+              <div class="text-center">
+                <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+                <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+                <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
+                <a href="mailto:diatension@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
+              </div>
+            </div>
+            <div class="column side">
+              <h6 class="text-center footer-headings">SIGN UP FOR OUR NEWSLETTER</h6>
+              <form action="#" class="form-inline">
+                <input type="email" class="form-control" placeholder="Email" Address="">
+                <button type="submit" class="btn btn-primary btn-search form-control">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row center-block">
+      <div class="col-sm-6">
+        <div class="copyright-text">
+          <p>Copyright &copy; 2018 STYLE All Rights Reserved</p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="copyright-text ">
+          <p> <a href="../index.html">Home</a> | <a href="#">Privacy</a> |<a href="#">Terms & Conditions</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

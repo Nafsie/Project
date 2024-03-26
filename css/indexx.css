@@ -1,0 +1,385 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+  font-family: Arial, Helvetica, sans-serif; 
+    margin: 20px;
+  } 
+.header{
+    background-color: #093426;
+    padding: 20px;
+    text-align: center;
+    color: #88C959;
+}
+  h2{
+    text-align: center;
+    
+    text-decoration: underline;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.424rem;
+}
+/* about info*/
+.about-diabetes{
+    float: left;
+    padding: 2%;
+    height: 70%;
+    max-width: max-content;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="number"] {
+  width: 100px;
+}
+.container{
+  border-top-color: #337ab7;
+      border-top: 4px solid #337ab7;
+
+}
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 1;
+}
+
+.active,
+.demo:hover {
+  opacity: 0.6;
+}
+
+p{
+    text-align: center;
+    color: #093426;
+    margin-bottom: 5px;
+    font-size: 16px;
+
+
+}
+.image{
+    float: right;
+    height: 80%;
+    margin-top: 10%;
+}
+/*content*/
+
+.column{
+    float: left;
+    padding: 10px;
+    
+
+    
+}
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+.column-66-p{
+  font-size: 22px;
+  color: #093426;
+  text-align: left;
+
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+.column.side{
+    width: 30%;
+}
+.column.middle{
+    width: 70%;
+}
+.column.two{
+  width: 40%;
+}
+.column.twomiddle{
+  width: 60%;
+}
+.column.half{
+  width: 50%;
+
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*responsive*/
+@media screen and (max-width: 700px){
+    .column.side, .column.middle.footer.carousel.thumbnail.last-thumbnail{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33, .column.two,.column.half{
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+/*navigation bar*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: black;
+    position: center;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: #88C959;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #88C959;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #172A09;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #172A09;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: max-content;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*footer*/
+.column.four{
+  width: 25%;
+}
+.column.four.a{
+  text-align: center;
+
+}
+
+.footer {
+    position: relative;
+    background-color: #093426;
+    color: #7d7975;
+    padding: 30px 0 30px;
+    font-size:16px;
+    }
+    
+    .footer p {
+    line-height:26px;
+    color : #FD4D0C;
+    width: max-content;
+    text-align: center;
+    
+    }
+    .footer h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: white  ;
+    position: relative;
+    padding-bottom: 16px;
+    text-align: center;
+    }
+    .footer h6:after {
+    content: '';
+    display: block;
+    margin: 5px 0 0;
+    width: 40%;
+    height: 1px;
+    /* background-color:  ; */
+    }
+    
+    .footer ul {
+    list-style: none;
+    line-height:35px;
+    margin: 0px 0px 0px -35px;
+    color: #172A09;
+    text-align: center;
+    }
+    
+    .footer-headings{
+    color: #D3D7D9;
+    }
+    .footer a {
+    color:#FD4D0C ;
+    text-align: center;
+    
+    
+    } 
+    .footer a:hover {
+    color: #aece61 ;
+    }
+    
+    .btn-lg_footer{
+    margin-top: 15px;
+    margin-left:40px;
+    
+    }
+   
+
+    .footer.copyright-text p {
+      color: #FD4D0C;
+      margin-top: 18px;
+      margin-bottom: 0;
+      font-size:15px;
+      text-align: center;
+      }
+      
+      .footer.copyright-text a {
+      color: #FD4D0C;
+      margin: 0px 10px 0px 10px;
+      text-align: center;
+      }
+      
+      .footer.copyright-text a:hover {
+      color: #aece61  ;
+      }
+/*forms*/
+    span{
+        color: #FD4D0C ;
+    }
+    
+    .form-bmi{
+        border-right: 100px;
+        /* border: 5px solid #213368 ;*/
+        padding: 30px; 
+        
+    
+    }
+    
+    .form-border{
+        border: 10px solid #172A09;
+        padding: 10px 30px;
+    }
+    
+    .form-group{
+        border-right: 100px;
+        
+    
+    }
+    
+    .bmi-img{
+        height: 400px;
+        width: 450px;
+        margin-top:30px;
+    
+    }
+    
+    .img-weight2{
+        height:400px;
+        width: 650px;
+    }
+  /* carousel*/
+  .carousel {
+    height: 400px;
+    margin-bottom: 0px;
+    
+    
+    }
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+    z-index: 10;
+    }
+    
+    /* Declare heights because of positioning of img element */
+    .carousel .item {
+    height: 400px;
+    background-color: #777;
+    }
+    .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    opacity: 1;
+    
+    }
+/*card*/
+.thumbnail{
+  border-top-color: #337ab7;
+  border-top: 4px solid;
+  display: block;
+  
+  }
+  
+  .last-thumbnail {
+    border-top-color: #337ab7;
+      border-top: 4px solid #337ab7;
+  }
+  
+  .caption h5{
+    color: #FD4D0C;
+    font-size: 48px;
+
+  }
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #093426;
+  }
+  h1 {
+    font-size: 64px
+  }
+  
+  
+  
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+ 
